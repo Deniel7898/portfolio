@@ -1,0 +1,349 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to right, #3a3a3a, #7a7a7a);
+    color: white;
+    overflow-x: hidden;
+    height: 100vh;
+    overflow-y: scroll; /* Ensure that vertical scrollbar is always visible if content exceeds height */
+}
+
+/* Customizing the Scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+/* Customizing the Scrollbar Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background */
+    border-radius: 10px;
+}
+
+/* Customizing the Scrollbar Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Grey color for the thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Smooth transition when hovering */
+}
+
+/* Hover Effect on the Thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey on hover */
+}
+
+/* Scrollbar Button (optional, if you want to customize the up and down arrows) */
+::-webkit-scrollbar-button {
+    display: none; /* Hides the scrollbar buttons */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #5d5d5d;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+header nav a.active {
+    color: #c9c9c9;
+    border-bottom: 2px solid #c9c9c9;
+}
+
+header nav a:hover {
+    color: #c9c9c9;
+    border-bottom: 2px solid #c9c9c9;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+section p {
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.home-img img {
+    border-radius: 80% 50%;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 
+        0px 0px 20px 5px rgba(166, 166, 166, 0.7),  /* Black blur effect */
+        0px 0px 15px 3px rgba(103, 103, 103, 0.7); /* Yellow blur effect */
+}
+
+.home-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.home-content h1 span {
+    color: #b5b5b5;
+}
+
+.home-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.home-content .socila-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.home-content .socila-icons a {
+    color: #d3d3d3;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.home-content .socila-icons a:hover {
+    color: #c0c0c0;
+    transform: scale(1.2);
+}
+
+/* Button Styling */
+.btn {
+    text-decoration: none;
+    color: white;
+    background: #707070;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #505050;
+    color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+/* Typing Effect Styling */
+.typing-text {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid #c9c9c9;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #c9c9c9;
+    }
+}
+
+/* About Section */
+#about {
+    background-color: #3a3a3a;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+
+/* Services Section */
+#services {
+    background-color: #2e2e2e;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+#services p {
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #3a3a3a;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+#skills p {
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #2e2e2e;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+
+/* Active Link */
+header nav a.active {
+    color: #c9c9c9;
+    border-bottom: 2px solid #c9c9c9;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav a {
+        padding: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Secondary Navigation (Above About Section) */
+.secondary-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444; /* Dark background */
+    padding: 10px 0;
+    position: sticky;
+    top: 60px; /* Adjusts the secondary nav to be below the main nav */
+    z-index: 998; /* Keeps it below the main navigation */
+}
+
+/* Style for Navigation Links */
+.secondary-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.secondary-nav a:hover {
+    color: #f0a500;
+    border-bottom: 2px solid #f0a500;
+}
+
+.secondary-nav a.active {
+    color: #f0a500;
+    border-bottom: 2px solid #f0a500;
+}
+
+
+
+
